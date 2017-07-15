@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Abhishek Pandey</title>
+    <link href="main.css/main.css" rel="stylesheet">
+    <script src="lib/jquery-3.0.0.min.js"></script>
+  </head>
+  <body>
+    <div class="home-section">
+      <a class="home-button" onclick="scrollToTop()">HOME</a>
+      <h1 class="heading" >
+        ABHISHEK PANDEY
+      </h1>
+      <img src="img/me.jpg" class="mypic">
+    </div>
+    <div class="aboutme-wrapper">
+      <div class="aboutme-section">
+        <h2 class="section-heading">
+          About me
+        </h2>
+        <div class="content">
+          <p>
+            I'm a paragraph. Click here to add your own text and edit me.<br> 
+            It’s easy. Just click “Edit Text” or double click me to add your<br>
+            own content and make changes to the font. Feel free to drag and <br>
+            drop me anywhere you like on your page. I’m a great place for you <br>
+            to tell a story and let your users know a little more about you.
+          </p>
+          <p>
+            I'm a paragraph. Click here to add your own text and edit me.<br> 
+            It’s easy. Just click “Edit Text” or double click me to add your<br>
+            own content and make changes to the font. Feel free to drag and <br>
+            drop me anywhere you like on your page. I’m a great place for you <br>
+            to tell a story and let your users know a little more about you.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="skills-wrapper">
+      <div class="skills-section">
+        <h2 class="section-heading">
+          skills
+        </h2>
+      </div>
+    </div>
+    <div class="contact-section">
+      <div class="contact-details">
+        <div class="contact-fields">
+          <h2>QUICK ID</h2>
+          <div class="field">
+            <span>phone</span>
+            <span>+919999594626</span>
+          </div>
+          <div class="field">
+            <span>Email</span>
+            <span>pandey.abhishek2770@gmail.com</span>
+          </div>
+          <div class="field">
+            <span>Address</span>
+            <span>D-56 west vinod nagar <br>Delhi-110092</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2 class="contact">
+          CONTACT ME
+        </h2>
+        <form class="contactus-form">
+          <div class="contactus-details-section">
+            <div class="contactus-inputs-section">
+              <input type="text" name="name" placeholder="Name" class="contactus-input" id="name" />
+              <input type="email" name="_replyto" placeholder="Email" class="contactus-input" id="mail" />
+              <input type="text" name="_subject" placeholder="Subject" class="contactus-input" id="sub" />
+            </div>
+            <div class="contactus-message-section">
+              <textarea name="message" placeholder="Message" class="message" id="msg"></textarea>
+            </div>
+          </div>
+          <div class="contactus-btn-section">
+            <input type="button" value="Send Message" class="contactus-btn" onclick="submitForm()" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bg-img"></div>
+  </body>
+  <script>
+    function submitForm() {
+      ['name', 'mail', 'sub', 'msg'].forEach(field => {
+        if (document.getElementById(field).value === '') {
+          document.getElementById(field).style.border = '1px solid red';
+        }
+      })
+    }
+    function scrollToTop() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+    }
+  </script>
+</html>
