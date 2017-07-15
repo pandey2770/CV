@@ -60,14 +60,6 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
 }
-.aboutme-section {
-  padding: 100px 0;
-  width: 66%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-}
 .aboutme-wrapper {
   background-color: #eeeaf4;
   width: 100%;
@@ -76,15 +68,30 @@ html, body {
 }
 .skills-wrapper {
   margin-top: 250px;
- background-color:  #bfc8da;
+  background-color:  #bfc8da;
   width: 100%;
-  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .work-wrapper {
   margin-top: 250px;
   background-color: #eeeaf4;
   width: 100%;
-  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-section {
+  padding: 100px 0;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px 0 100px;
 }
 .content {
   display: flex;
@@ -99,12 +106,10 @@ html, body {
 .section-heading {
   font-size: 50px;
   color: white;
-  padding-left: 150px;
-  padding-top: 50px;
 }
 p {
   font-size: 25px;
-  color: #066D99;
+  color: #374b70;
 }
 .input1 {
   border: none;
@@ -233,24 +238,58 @@ p {
 .field > span:first-of-type {
   margin-right: 20px;
 }
-.experience-college{
-  height: 250px;
-  width: 25%;
-  color: #eeeaf4;
-  font-size: 20px;
-  background-color: #374b70;
-  text-align: center;
-}
 .experience {
   text-align: center;
   height: 250px;
-  width: 25%;
-  color: #374b70;
+  width: 33%;
   font-size: 20px;
   background-color: #eeeaf4;
+  color: #374b70;
 }
-.experience-flex{
+.experience-dark {
+  color: #eeeaf4;
+  background-color: #374b70;
+}
+.skills-section {
   display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.skills {
+  width: 33%;
+  height: 250px;
+  background-color: #bfc8da;
+  color: #374b70;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills > a {
+  color: white;
+}
+.skills-dark {
+  color: #eeeaf4;
+  background-color: #374b70;
+}
+.skills-icon {
+  width: 90px;
+  border-radius: 50%;
+}
+.skills-title {
+  margin-top: 20px;
+  font-size: 22px;
+}
+.duration {
+  font-size: 15px;
+  margin-top: -10px;
+}
+.top-margined {
+  margin-top: 15px;
+}
+.experience-section {
+  display: flex;
+  width: 100%;
   justify-content: center;
 }
 @media only screen and (max-width: 700px) {

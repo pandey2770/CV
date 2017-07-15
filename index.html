@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Abhishek Pandey</title>
-    <link href="main.css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
     <script src="lib/jquery-3.0.0.min.js"></script>
   </head>
@@ -16,7 +16,7 @@
       <img src="img/me.jpg" class="mypic">
     </div>
     <div class="aboutme-wrapper">
-      <div class="aboutme-section">
+      <div class="inner-section">
         <h2 class="section-heading">
           About me
         </h2>
@@ -35,30 +35,54 @@
       </div>
     </div>
     <div class="skills-wrapper">
-      <div>
+      <div class="inner-section">
         <h2 class="section-heading">
           Academic & Work
         </h2>
-      </div>
-      <div class="experience-flex">
-        <div class="experience">
-        <h2>Experience</h2>
-          <span> 1 year with humble & <br>1 year as a freelancer</span>
-        </div>
-      <div class="experience-college">
-        <h2>College</h2>
-          <span> Amity University  <br>B.Tech computer science</span>
-        </div>
-        <div class="experience">
-        <h2>School</h2>
-          <span> Lovely Public School  <br>Class 12 in 2012</span>
+        <div class="experience-section">
+          <div class="experience">
+            <h2>Experience</h2>
+            <div>
+              <div>1 year with <a href="http://humble.net.in" />Humble</a> (co-founder)</div>
+              <div class="duration">(June'2016 - Current)</div>
+            </div>
+            <div class="top-margined">
+              <div>1 year as individual freelancer</div>
+              <div class="duration">(June'2015 - June'2016)</div>
+            </div>
+          </div>
+          <div class="experience experience-dark">
+            <h2>College</h2>
+            <span> Amity University <br>B.Tech computer science</span>
+            <div class="duration">(July'2012 - May'2016)</div>
+          </div>
+          <div class="experience">
+            <h2>School</h2>
+            <span>Lovely Public School, Delhi<br>Class 12 in 2012</span>
+          </div>
         </div>
       </div>
     </div>
     <div class="work-wrapper">
-      <h2 class="section-heading">
-        Skills
-      </h2>
+      <div class="inner-section">
+        <h2 class="section-heading">
+          Skills
+        </h2>
+        <div class="skills-section">
+          <div class="skills skills-dark">
+            <img src="img/calc.png" class="skills-icon">
+            <span class="skills-title">Calculator</span>
+            <span>In-browser calculator application built using vanills JS</span>
+            <a href="">Check</a>
+          </div>
+          <div class="skills">
+            <img src="img/browser.svg" class="skills-icon">
+          </div>
+          <div class="skills skills-dark">
+            <img src="img/browser.svg" class="skills-icon">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contact-section">
       <div class="contact-details">
@@ -102,7 +126,7 @@
       </div>
     </div>
     <div class="bg-img-wrapper">
-      <img src="back.png" class="bg-img"></div>
+      <img src="img/back.png" class="bg-img"></div>
     </div>
   </body>
   <script>
