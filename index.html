@@ -38,11 +38,9 @@
       </div>
     </div>
     <div class="skills-wrapper">
-      <div class="skills-section">
         <h2 class="section-heading">
           skills
         </h2>
-      </div>
     </div>
     <div class="contact-section">
       <div class="contact-details">
@@ -63,10 +61,10 @@
         </div>
       </div>
       <div class="contact-form">
-        <h2 class="contact">
+        <h2>
           CONTACT ME
         </h2>
-        <form class="contactus-form">
+        <form class="contactus-form" id="contactus-form">
           <div class="contactus-details-section">
             <div class="contactus-inputs-section">
               <input type="text" name="name" placeholder="Name" class="contactus-input" id="name" />
@@ -86,13 +84,27 @@
     <div class="bg-img"></div>
   </body>
   <script>
+    
     function submitForm() {
+      var error;
       ['name', 'mail', 'sub', 'msg'].forEach(field => {
         if (document.getElementById(field).value === '') {
+          error = true;
           document.getElementById(field).style.border = '1px solid red';
         }
       })
+      if (!error) {
+        $.ajax({
+          url:'http://formspree.io/pandey.abhishek2770@gmail.com',
+          type:'post',
+          data:$('#contactus-form').serialize(),
+          dataType: "json",
+          success:function(){
+          }
+        });
+      }
     }
+
     function scrollToTop() {
       $('html, body').animate({
         scrollTop: 0
