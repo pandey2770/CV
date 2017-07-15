@@ -62,7 +62,7 @@ html, body {
 }
 .aboutme-section {
   padding: 100px 0;
-  width: 60%;
+  width: 66%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -99,6 +99,12 @@ html, body {
 .section-heading {
   font-size: 50px;
   color: white;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+p {
+  font-size: 25px;
+  color: #066D99;
 }
 .input1 {
   border: none;
@@ -226,6 +232,26 @@ html, body {
 }
 .field > span:first-of-type {
   margin-right: 20px;
+}
+.experience-college{
+  height: 250px;
+  width: 25%;
+  color: #eeeaf4;
+  font-size: 20px;
+  background-color: #374b70;
+  text-align: center;
+}
+.experience {
+  text-align: center;
+  height: 250px;
+  width: 25%;
+  color: #374b70;
+  font-size: 20px;
+  background-color: #eeeaf4;
+}
+.experience-flex{
+  display: flex;
+  justify-content: center;
 }
 @media only screen and (max-width: 700px) {
   .heading {
