@@ -2,21 +2,28 @@ html, body {
    height: 100%;
    width: 100%;
    margin: 0;
+   font-family: 'Tenali Ramakrishna', sans-serif;
 }
-.bg-img { 
-  background-image:url("../back.png");
+.bg-img-wrapper { 
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: -10;
-  background-repeat: no-repeat;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+.bg-img { 
+  width: auto;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
   top: 0;
 }
 .home-button {
   cursor: pointer;
   font-weight: 600;
-  font-size: larger;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 44px;
   margin-top: 70px;
   margin-left: 50px;
   color: white;
@@ -39,14 +46,9 @@ html, body {
 }
 .heading {
   text-align: center;
-  font-size: -webkit-xxx-large;
+  font-size: 75px;  
   color: white;
   margin-top: 10%;
-}
-@media only screen and (max-width: 700px) {
-  .heading {
-    margin-top: 30%;
-  }
 }
 .home-section {
   margin: auto;
@@ -59,7 +61,7 @@ html, body {
   justify-content: space-between;
 }
 .aboutme-section {
-  height: 500px;
+  padding: 100px 0;
   width: 60%;
   display: flex;
   justify-content: center;
@@ -74,17 +76,28 @@ html, body {
 }
 .skills-wrapper {
   margin-top: 250px;
+ background-color:  #bfc8da;
+  width: 100%;
+  height: 550px;
+}
+.work-wrapper {
+  margin-top: 250px;
   background-color: #eeeaf4;
   width: 100%;
-  height: 600px;
-  background-image:url("../back3.jpg");
+  height: 550px;
 }
 .content {
   display: flex;
   justify-content: space-between;
 }
+.content > p:first-of-type {
+  margin-right: 25px;
+}
+.content > p:nth-child(2) {
+  margin-left: 25px;
+}
 .section-heading {
-  font-size: xx-large;
+  font-size: 50px;
   color: white;
 }
 .input1 {
@@ -119,9 +132,10 @@ html, body {
   height: 35px;
   margin-bottom: 15px;
   border: none;
-  font-size: 15px;
+  font-size: 20px;
   padding: 0 10px;
   border: 1px solid rgb(241, 242, 244);
+  font-family: 'Tenali Ramakrishna', sans-serif;
 }
 .contactus-message-section {
   width: 40%;
@@ -139,21 +153,30 @@ html, body {
   resize: none;
   padding: 10px;
   border: 1px solid rgb(241, 242, 244);
-  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
 }
 .contactus-btn {
   background: #066D99;
   color: rgb(239,240,241);
   border: none;
   padding: 10px 15px;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
   cursor: pointer;
 }
 .field {
   display: flex;
   justify-content: space-between;
-  font-size: 25px;
   margin-bottom: 25px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 25px;
+}
+.field > span:first-of-type {
+  text-align: left;
+}
+.field > span:nth-child(2) {
+  text-align: right;
 }
 .contact-section{
   display: flex;
@@ -182,4 +205,39 @@ html, body {
 }
 .contact {
   color: black
+}
+.error-msg {
+  color: red;
+  display: none;
+}
+.success-msg {
+  color: green;
+  display: none;
+}
+.content-id{
+  padding-bottom: 10px;
+  font-size: 50px;
+  color: #1b1c1d;
+  padding-left: 60px;
+}
+.content-id-1{
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+.field > span:first-of-type {
+  margin-right: 20px;
+}
+@media only screen and (max-width: 700px) {
+  .heading {
+    margin-top: 30%; 
+  }
+  .content > p:first-of-type {
+    margin-right: 10px;
+  }
+  .content > p:nth-child(2) {
+    margin-left: 10px;
+  }
+  html, body {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+  }
 }

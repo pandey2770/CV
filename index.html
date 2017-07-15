@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Abhishek Pandey</title>
     <link href="main.css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
     <script src="lib/jquery-3.0.0.min.js"></script>
   </head>
   <body>
@@ -21,38 +22,41 @@
         </h2>
         <div class="content">
           <p>
-            I'm a paragraph. Click here to add your own text and edit me.<br> 
-            It’s easy. Just click “Edit Text” or double click me to add your<br>
-            own content and make changes to the font. Feel free to drag and <br>
-            drop me anywhere you like on your page. I’m a great place for you <br>
-            to tell a story and let your users know a little more about you.
+            Hi ! I’m Abhishek Pandey, a professional software engineer with more than 2
+            years experience living in India, Delhi. I spend a lot time working on software,
+            or other awesome stuff . I can get in touch with to build beautiful
+            and awesome software ,useful products, and web sites. 
           </p>
           <p>
-            I'm a paragraph. Click here to add your own text and edit me.<br> 
-            It’s easy. Just click “Edit Text” or double click me to add your<br>
-            own content and make changes to the font. Feel free to drag and <br>
-            drop me anywhere you like on your page. I’m a great place for you <br>
-            to tell a story and let your users know a little more about you.<br>
+            The work I provide is of highest quality, fully responsive, 
+            and tested in a wide range of devices. I take great care to 
+            ensure each project is well-documented and easily maintainable 
+            so you can enhance a website as your company grows.
           </p>
         </div>
       </div>
     </div>
     <div class="skills-wrapper">
-        <h2 class="section-heading">
-          skills
-        </h2>
+      <h2 class="section-heading">
+        Academic &<br>Work Experience
+      </h2>
+    </div>
+     <div class="work-wrapper">
+      <h2 class="section-heading">
+        skills
+      </h2>
     </div>
     <div class="contact-section">
       <div class="contact-details">
         <div class="contact-fields">
-          <h2>QUICK ID</h2>
+          <h2 class="content-id-1">QUICK ID</h2>
           <div class="field">
             <span>phone</span>
             <span>+919999594626</span>
           </div>
           <div class="field">
             <span>Email</span>
-            <span>pandey.abhishek2770@gmail.com</span>
+            <span class="span">pandey.abhishek2770@gmail.com</span>
           </div>
           <div class="field">
             <span>Address</span>
@@ -61,7 +65,7 @@
         </div>
       </div>
       <div class="contact-form">
-        <h2>
+        <h2 class="content-id">
           CONTACT ME
         </h2>
         <form class="contactus-form" id="contactus-form">
@@ -78,21 +82,36 @@
           <div class="contactus-btn-section">
             <input type="button" value="Send Message" class="contactus-btn" onclick="submitForm()" />
           </div>
+          <div id="error" class="error-msg">Please enter values correctly.</div>
+          <div id="success" class="success-msg">Thanks, I will get back to you soon.</div>
         </form>
       </div>
     </div>
-    <div class="bg-img"></div>
+    <div class="bg-img-wrapper">
+      <img src="back.png" class="bg-img"></div>
+    </div>
   </body>
   <script>
     
     function submitForm() {
+      document.getElementById('error').style.display = 'none';
+      document.getElementById('success').style.display = 'none';
+      document.getElementById('error').innerHTML = '';
       var error;
       ['name', 'mail', 'sub', 'msg'].forEach(field => {
         if (document.getElementById(field).value === '') {
           error = true;
           document.getElementById(field).style.border = '1px solid red';
+          document.getElementById('error').style.display = 'block';
+          document.getElementById('error').innerHTML = 'All fields are mandatory. <br/>';
         }
-      })
+      });
+      if (!validateEmail(document.getElementById('mail').value)) {
+        document.getElementById('mail').style.border = '1px solid red';
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('error').innerHTML =
+          document.getElementById('error').innerHTML + 'Email entered is not valid.';
+      }
       if (!error) {
         $.ajax({
           url:'https://formspree.io/pandey.abhishek2770@gmail.com',
@@ -100,9 +119,18 @@
           data:$('#contactus-form').serialize(),
           dataType: "json",
           success:function(){
+            document.getElementById('success').style.display = 'block';
+          },
+          error:function(){
+            document.getElementById('error').style.display = 'block';
           }
         });
       }
+    }
+
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     }
 
     function scrollToTop() {
