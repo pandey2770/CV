@@ -43,7 +43,7 @@
           <div class="experience">
             <h2>Experience</h2>
             <div>
-              <div>1 year with <a href="http://humble.net.in" />Humble</a> (co-founder)</div>
+              <div>1 year with <a target="_blank" href="http://humble.net.in" />Humble</a> (co-founder)</div>
               <div class="duration">(June'2016 - Current)</div>
             </div>
             <div class="top-margined">
@@ -143,7 +143,8 @@
           document.getElementById('error').innerHTML = 'All fields are mandatory. <br/>';
         }
       });
-      if (!validateEmail(document.getElementById('mail').value)) {
+      if (document.getElementById('mail').value &&
+        !validateEmail(document.getElementById('mail').value)) {
         document.getElementById('mail').style.border = '1px solid red';
         document.getElementById('error').style.display = 'block';
         document.getElementById('error').innerHTML =

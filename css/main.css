@@ -10,12 +10,10 @@ html, body {
   position: fixed;
   z-index: -10;
   top: 0;
-  display: flex;
-  justify-content: center;
 }
 .bg-img { 
-  width: auto;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   position: fixed;
   z-index: -10;
   top: 0;
@@ -153,7 +151,7 @@ p {
 }
 .contactus-btn-section {
   position: relative;
-  margin: 10px 0 50px;
+  margin: 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -168,13 +166,14 @@ p {
   font-family: 'Tenali Ramakrishna', sans-serif;
 }
 .contactus-btn {
-  background: #066D99;
+  background: #374b70;
   color: rgb(239,240,241);
   border: none;
   padding: 10px 15px;
   font-size: 20px;
   font-family: 'Tenali Ramakrishna', sans-serif;
   cursor: pointer;
+  line-height: 16px;
 }
 .field {
   display: flex;
