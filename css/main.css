@@ -18,6 +18,12 @@ html, body {
   z-index: -10;
   top: 0;
 }
+.img-desktop {
+  display: block;
+}
+.img-mobile {
+  display: none;
+}
 .home-button {
   cursor: pointer;
   font-weight: 600;
@@ -291,7 +297,7 @@ p {
   width: 100%;
   justify-content: center;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .heading {
     margin-top: 30%; 
   }
@@ -304,4 +310,116 @@ p {
   html, body {
     font-family: 'Tenali Ramakrishna', sans-serif;
   }
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .aboutme-wrapper {
+  background-color: #eeeaf4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 70%;
+  }
+  .content {
+  display: block;
+  }
+  .inner-section {
+  padding: 100px 0;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 239px 0 100px;
+}
+.content > p:first-of-type {
+  font-size: 40px;
+}
+.content > p:nth-child(2) {
+  margin-left: 10px;
+  font-size: 40px;
+}
+.skills-wrapper {
+  height: 70%;
+}
+.section-heading {
+  font-size: 75px;
+  margin-top: -150px;
+}
+.experience-section {
+  display: block;
+}
+.experience {
+  width: 75%;
+  height: 300px;
+  margin-left: 10%;
+  font-size: 30px;
+}
+.duration {
+  font-size: 29px;
+}
+.work-wrapper {
+  height: 70%;
+} 
+.skills-section {
+  display: block;
+}
+.skills-dark {
+  width: 75%;
+  height: 300px;
+  font-size: 30px;
+}
+.skills {
+  width: 75%;
+  height: 300px;
+  margin-left: 10%;
+  font-size: 27px;
+}
+.skills-title {
+  font-size: 40px;
+}
+.contact-section {
+  display: block;
+}
+.contact-details {
+  width: 100%;
+  height: 500px;
+}
+.contact-form {
+  width: 100%;
+  height: 500px;
+}
+.content-id {
+  font-size: 60px;
+}
+.content-id-1 {
+  font-size: 60px;
+}
+.contactus-details-section {
+  width: 85%;
+}
+.contactus-input {
+  height: 50px;
+  font-size: 35px;
+}
+.message {
+  height: 160px;
+  font-size: 35px;
+}
+.contactus-btn-section {
+  margin: 50px 0;
+}
+.contactus-btn {
+  padding: 14px 20px;
+  font-size: 30px;
+}
+.field {
+  font-size: 35px;
+}
+.home-button {
+  font-size: 60px;
+}
 }
