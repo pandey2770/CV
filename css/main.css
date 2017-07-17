@@ -1,6 +1,6 @@
 html, body {
-   height: 100%;
-   width: 100%;
+   height: auto;
+   width: auto;
    margin: 0;
    font-family: 'Tenali Ramakrishna', sans-serif;
 }
@@ -307,8 +307,11 @@ p {
   justify-content: center;
 }
 @media only screen and (max-width: 1000px) {
+  body{
+    width: 200%;
+  }
   .heading {
-    margin-top: 30%; 
+    margin-top: 15%; 
   }
   .content > p:first-of-type {
     margin-right: 10px;
@@ -316,8 +319,8 @@ p {
   .content > p:nth-child(2) {
     margin-left: 10px;
   }
-  html, body {
-    font-family: 'Tenali Ramakrishna', sans-serif;
+  .mypic {
+    margin-top: -75px;
   }
   .img-desktop {
     display: none;
