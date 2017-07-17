@@ -97,6 +97,15 @@ html, body {
   flex-direction: column;
   padding: 50px 0 100px;
 }
+.inner-section-project {
+  padding: 100px 0;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px 0 100px;
+}
 .content {
   display: flex;
   justify-content: space-between;
@@ -347,16 +356,17 @@ p {
 }
 .section-heading {
   font-size: 75px;
-  margin-top: -150px;
 }
 .experience-section {
   display: block;
+  margin-bottom: 175px;
 }
 .experience {
   width: 75%;
   height: 300px;
   margin-left: 10%;
   font-size: 30px;
+  display: table;
 }
 .duration {
   font-size: 29px;
