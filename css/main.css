@@ -308,7 +308,7 @@ p {
 }
 @media only screen and (max-width: 1000px) {
   body{
-    width: 200%;
+    width: 100%;
   }
   .heading {
     margin-top: 15%; 
