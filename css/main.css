@@ -211,7 +211,7 @@ p {
   margin-top: 250px;
   color: #FFF;
   display: flex;
-  height: 300px;
+  height: 450px;
 }
 .contact-details {
   background-color: #374b70;
@@ -230,6 +230,11 @@ p {
 }
 .contact {
   color: black
+}
+.footer {
+  background-color: #E6EBF1;
+  text-align: center;
+  color: #656dad;
 }
 .error-msg {
   color: red;
