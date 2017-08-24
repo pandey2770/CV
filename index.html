@@ -9,11 +9,13 @@
     <title>Abhishek Pandey</title>
     <link href="css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script> 
     <script src="lib/jquery-3.0.0.min.js"></script>
   </head>
   <body>
     <div class="home-section">
-      <a class="home-button" onclick="scrollToTop()">HOME</a>
+      <h1 class="home-button" onclick="scrollToTop()">HOME</h1>
+      <h1><a href="make.html"> Your Own CV</a></h1>
       <h1 class="heading" >
         ABHISHEK PANDEY
       </h1>
@@ -25,14 +27,14 @@
           About me
         </h2>
         <div class="content">
-          <p>
+          <p class="p">
             Hi I’m Abhishek, a software programmer living in Delhi.
              I love spending time on building cool stuff, and from
               last 2 years I have been coding cool Web Applications. 
               I build innovative, reliable and useful software
               product.
           </p>
-          <p>
+          <p class="p">
             I write high quality code, the web applications 
             I build are fully responsive, and tested across a wide range 
             of devices and screens. My each piece of code is well documented
@@ -50,7 +52,7 @@
           <div class="experience">
             <h2>Experience</h2>
             <div>
-              <div>1 year with <a target="_blank" href="http://humble.net.in" />Humble</a> (co-founder)</div>
+              <div>1 year with <a target="_blank" href="http://humble.net.in">Humble</a> (co-founder)</div>
               <div class="duration">(June'2016 - Current)</div>
             </div>
             <div class="top-margined">
@@ -139,52 +141,4 @@
       MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in" />Humble</a>
     </footer>
   </body>
-  <script>
-    function submitForm() {
-      document.getElementById('error').style.display = 'none';
-      document.getElementById('success').style.display = 'none';
-      document.getElementById('error').innerHTML = '';
-      var error;
-      ['name', 'mail', 'sub', 'msg'].forEach(field => {
-        if (document.getElementById(field).value === '') {
-          error = true;
-          document.getElementById(field).style.border = '1px solid red';
-          document.getElementById('error').style.display = 'block';
-          document.getElementById('error').innerHTML = 'All fields are mandatory. <br/>';
-        }
-      });
-      if (document.getElementById('mail').value &&
-        !validateEmail(document.getElementById('mail').value)) {
-        document.getElementById('mail').style.border = '1px solid red';
-        document.getElementById('error').style.display = 'block';
-        document.getElementById('error').innerHTML =
-          document.getElementById('error').innerHTML + 'Email entered is not valid.';
-      }
-      if (!error) {
-        $.ajax({
-          url:'https://formspree.io/pandey.abhishek2770@gmail.com',
-          type:'post',
-          data:$('#contactus-form').serialize(),
-          dataType: "json",
-          success:function(){
-            document.getElementById('success').style.display = 'block';
-          },
-          error:function(){
-            document.getElementById('error').style.display = 'block';
-          }
-        });
-      }
-    }
-
-    function validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
-    }
-
-    function scrollToTop() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-    }
-  </script>
 </html>

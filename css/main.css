@@ -4,6 +4,9 @@ html, body {
    margin: 0;
    font-family: 'Tenali Ramakrishna', sans-serif;
 }
+.body {
+  background-color: #eeeaf4;
+}
 .bg-img-wrapper { 
   width: 100%;
   height: 100%;
@@ -120,7 +123,7 @@ html, body {
   font-size: 50px;
   color: white;
 }
-p {
+.p {
   font-size: 25px;
   color: #374b70;
 }
@@ -311,6 +314,45 @@ p {
   width: 100%;
   justify-content: center;
 }
+.make-heading {
+  text-align: center;
+  font-size: -webkit-xxx-large;
+  font-variant-caps: unicase;
+  color: #374b70;
+  font-weight: lighter;
+}
+.line-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.white-line {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  width: 85%;
+}
+.rotate {
+  margin-left: 25px;
+  text-align: end;
+}
+.make-name {
+  margin-left: 125px;
+}
+.make-one {
+  font-size:-webkit-xxx-large;
+}
+.make-flex {
+  display: flex;
+  margin-left: 82px;
+  margin-bottom: 50px;  
+}
+.line {
+  width: 50%;
+}
+.main-section {
+  display: none;
+}
 @media only screen and (max-width: 1000px) {
   body{
     width: 100%;
@@ -344,101 +386,101 @@ p {
   display: block;
   }
   .inner-section {
-  padding: 100px 0;
-  width: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 239px 0 100px;
-}
-.content > p:first-of-type {
-  font-size: 40px;
-}
-.content > p:nth-child(2) {
-  margin-left: 10px;
-  font-size: 40px;
-}
-.skills-wrapper {
-  height: 70%;
-}
-.section-heading {
-  font-size: 75px;
-}
-.experience-section {
-  display: block;
-  margin-bottom: 175px;
-}
-.experience {
-  width: 75%;
-  height: 300px;
-  margin-left: 10%;
-  font-size: 30px;
-  display: table;
-}
-.duration {
-  font-size: 29px;
-}
-.work-wrapper {
-  height: 70%;
-} 
-.skills-section {
-  display: block;
-}
-.skills-dark {
-  width: 75%;
-  height: 300px;
-  font-size: 30px;
-}
-.skills {
-  width: 75%;
-  height: 300px;
-  margin-left: 10%;
-  font-size: 27px;
-}
-.skills-title {
-  font-size: 40px;
-}
-.contact-section {
-  display: block;
-  height: 1045px;
-}
-.contact-details {
-  width: 100%;
-  height: 500px;
-}
-.contact-form {
-  width: 100%;
-  height: 500px;
-}
-.content-id {
-  font-size: 60px;
-}
-.content-id-1 {
-  font-size: 60px;
-}
-.contactus-details-section {
-  width: 85%;
-}
-.contactus-input {
-  height: 50px;
-  font-size: 35px;
-}
-.message {
-  height: 160px;
-  font-size: 35px;
-}
-.contactus-btn-section {
-  margin: 50px 0;
-}
-.contactus-btn {
-  padding: 14px 20px;
-  font-size: 30px;
-}
-.field {
-  font-size: 35px;
-}
-.home-button {
-  font-size: 61px;
-}
+    padding: 100px 0;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 239px 0 100px;
+  }
+  .content > p:first-of-type {
+    font-size: 40px;
+  }
+  .content > p:nth-child(2) {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+  .skills-wrapper {
+    height: 70%;
+  }
+  .section-heading {
+    font-size: 75px;
+  }
+  .experience-section {
+    display: block;
+    margin-bottom: 175px;
+  }
+  .experience {
+    width: 75%;
+    height: 300px;
+    margin-left: 10%;
+    font-size: 30px;
+    display: table;
+  }
+  .duration {
+    font-size: 29px;
+  }
+  .work-wrapper {
+    height: 70%;
+  } 
+  .skills-section {
+    display: block;
+  }
+  .skills-dark {
+    width: 75%;
+    height: 300px;
+    font-size: 30px;
+  }
+  .skills {
+    width: 75%;
+    height: 300px;
+    margin-left: 10%;
+    font-size: 27px;
+  }
+  .skills-title {
+    font-size: 40px;
+  }
+  .contact-section {
+    display: block;
+    height: 1045px;
+  }
+  .contact-details {
+    width: 100%;
+    height: 500px;
+  }
+  .contact-form {
+    width: 100%;
+    height: 500px;
+  }
+  .content-id {
+    font-size: 60px;
+  }
+  .content-id-1 {
+    font-size: 60px;
+  }
+  .contactus-details-section {
+    width: 85%;
+  }
+  .contactus-input {
+    height: 50px;
+    font-size: 35px;
+  }
+  .message {
+    height: 160px;
+    font-size: 35px;
+  }
+  .contactus-btn-section {
+    margin: 50px 0;
+  }
+  .contactus-btn {
+    padding: 14px 20px;
+    font-size: 30px;
+  }
+  .field {
+    font-size: 35px;
+  }
+  .home-button {
+    font-size: 61px;
+  }
 }

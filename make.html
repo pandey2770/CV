@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Make Your Own CV</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script> 
+    <script src="lib/jquery-3.0.0.min.js"></script>
+  </head>
+  <body class="body">
+    <div class="main-section" id="none">
+      <div class="home-section">
+        <h1 class="home-button" onclick="scrollToTop()">HOME</h1>
+        <h1 class="heading"  id="namecome">
+          <! ABHISHEK PANDEY>
+        </h1>
+          <img src="" class="mypic" id="pic">
+      </div>
+      <div class="aboutme-wrapper" id="comecolor">
+        <div class="inner-section">
+          <h2 class="section-heading" id="aboutcome">
+              <!About me>
+          </h2>
+          <div class="content" id="content">
+            <p id="paraonecome">
+                <! Hi I’m Abhishek, a software programmer living in Delhi.
+                  I love spending time on building cool stuff, and from
+                  last 2 years I have been coding cool Web Applications. 
+                  I build innovative, reliable and useful software
+                  product.>
+            </p>
+            <p id="parasecondcome">
+              <!  I write high quality code, the web applications 
+                I build are fully responsive, and tested across a wide range 
+                of devices and screens. My each piece of code is well documented
+                  to ease maintenance and further enhancement.>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="skills-wrapper" id="bac">
+        <div class="inner-section">
+          <h2 class="section-heading" id="acdd-come">
+            <! Academic & Work>
+          </h2>
+          <div class="experience-section">
+            <div class="experience" id="expc">
+              <h2 id="exp"><!Experience></h2>
+              <div>
+                <div id="exp1">1 year with <a target="_blank" href="http://humble.net.in">Humble</a> (co-founder)</div>
+                <div class="duration" id="expy"><!(June'2016 - Current)></div> 
+              </div>
+              <div class="top-margined">
+                <div id="exp2">1 year as individual freelancer</div>
+                <div class="duration" id="expy1"><!(June'2015 - June'2016)></div>
+              </div>
+            </div>
+            <div class="experience experience-dark">
+              <h2>College</h2>
+              <span> Amity University <br>B.Tech computer science</span>
+              <div class="duration">(July'2012 - May'2016)</div>
+            </div>
+            <div class="experience">
+              <h2>School</h2>
+              <span>Lovely Public School, Delhi<br>Class 12 in 2012</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-wrapper">
+        <div class="inner-section-project">
+          <h2 class="section-heading">
+            Skills
+          </h2>
+          <div class="skills-section">
+            <div class="skills skills-dark">
+              <img src="img/calc.png" class="skills-icon">
+              <span class="skills-title">Calculator</span>
+              <span>In-browser calculator application built using vanills JS</span>
+            </div>
+            <div class="skills">
+              <img src="img/browser.svg" class="skills-icon">
+            </div>
+            <div class="skills skills-dark">
+              <img src="img/browser.svg" class="skills-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-section">
+        <div class="contact-details">
+          <div class="contact-fields">
+            <h2 class="content-id-1">QUICK ID</h2>
+            <div class="field">
+              <span>phone</span>
+              <span>+919999594626</span>
+            </div>
+            <div class="field">
+              <span>Email</span>
+              <span class="span">pandey.abhishek2770@gmail.com</span>
+            </div>
+            <div class="field">
+              <span>Address</span>
+              <span>D-56 west vinod nagar <br>Delhi-110092</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2 class="content-id">
+            CONTACT ME
+          </h2>
+          <form class="contactus-form" id="contactus-form">
+            <div class="contactus-details-section">
+              <div class="contactus-inputs-section">
+                <input type="text" name="name" placeholder="Name" class="contactus-input" id="name">
+                <input type="email" name="_replyto" placeholder="Email" class="contactus-input" id="mail">
+                <input type="text" name="_subject" placeholder="Subject" class="contactus-input" id="sub">
+              </div>
+              <div class="contactus-message-section">
+                <textarea name="message" placeholder="Message" class="message" id="msg"></textarea>
+              </div>
+            </div>
+            <div class="contactus-btn-section">
+              <input type="button" value="Send Message" class="contactus-btn" onclick="submitForm()">
+            </div>
+            <div id="error" class="error-msg">Please enter values correctly.</div>
+            <div id="success" class="success-msg">Thanks, I will get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+      <div class="bg-img-wrapper">
+        <img src="img/backDesktop.png" class="bg-img img-desktop"  id="backpic">
+      </div>
+      <img src="img/backMobile.png" class="bg-img img-mobile">
+      <footer class="footer">
+        MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in">Humble</a>
+      </footer>
+    </div>
+    <div id="see">
+    <h1 class="make-heading">Get Your Own CV </h1>
+    <div class="line-wrapper">
+      <div class="white-line"></div>
+    </div>
+    <div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">1</span>
+        </div>
+        <div class="rotate">
+          <span>Name<br>Your Image<br></span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="Your Name" id="abhi" />
+          <label>Color</label>
+          <input type="color" value="#ffffff" id="color-name"/><br>
+          <label>Your Image</label>
+          <input type="file" onchange="uploadImage(event)"/><br>
+          <label>Background Image</label>
+          <input type="file" onchange="image(event)"/><br>
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line line"></div>
+      </div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">2</span>
+        </div>
+        <div class="rotate">
+          <span>About you<br>Briefly Describe</span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="About Me (Heading)" id="about" />
+          <label>Color</label>
+          <input type="color" value="#ffffff" id="about-color"/><br>
+          <textarea name="Message" placeholder="First paragrahpe" id="about-para-one"/></textarea>
+          <textarea name="Message" placeholder="Second paragrahpe" id="about-para-second"></textarea>
+          <label>Color</label>
+          <input type="color" value="#374b70" id="paracolor"/><br>
+          <lable> Background color</lable>
+          <input type="color" value="#eeeaf4" id="about-backcolor"/>
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line"></div>
+      </div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">3</span>
+        </div>
+        <div class="rotate">
+          <span>Academic<br>Experience<br>School & Collage</span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="Academic & Work (Heading)" id="acdd"/>
+          <label>Color</label>
+          <input type="color" value="#ffffff" id="acdd-color"/><br>
+          <input type="text" placeholder="Experience (Heading)" id="exph"/>
+          <input type="text" placeholder="About Experience" id="exph1"/>
+          <input type="text" placeholder="Experience Year" id="exphy"/>
+          <input type="text" placeholder="About Experience" id="exph2"/>
+          <input type="text" placeholder="Experience Year" id="exphy1"/>
+          <label>Color</label>
+          <input type="color" value="#374b70" id="exphc"/>
+          <span>(Backgroung Color)</span>
+          <input type="color" value="#eeeaf4" id="exphb"/><br>
+          <input type="text" placeholder="Collage (Heading)"/>
+          <input type="text" placeholder="Collage Name"/>
+          <input type="text" placeholder="Course Name"/>
+          <label>Color</label>
+          <input type="color" value="#eeeaf4"/>
+          <span>(Backgroung Color)</span>
+          <input type="color" value="#374b70"/><br>
+          <input type="text" placeholder="School (Heading)"/>
+          <input type="text" placeholder="School Name"/>
+          <input type="text" placeholder="Class And Year"/>
+          <label>Color</label>
+          <input type="color" value="#374b70"/>
+          <lable>Backgroung Color</lable>
+          <input type="color" value="#eeeaf4"/><br>
+          <label> Background color</label>
+          <input type="color" value="#eeeaf4" id="ac-color"/>
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line line"></div>
+      </div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">4</span>
+        </div>
+        <div class="rotate">
+          <span>Skills<br>Projects</span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="Skills (Heading)">
+          <label>Color</label>
+          <input type="color" value="#ffffff"><br>
+          <input type="text" placeholder="Heading">
+          <input type="text" placeholder="About">
+          <label>Color</label>
+          <input type="color" value="#eeeaf4">
+          <span>(Backgroung Color)</span>
+          <input type="color" value="#374b70"><br>
+          <input type="text" placeholder="Heading">
+          <input type="text" placeholder="About">
+          <label>Color</label>
+          <input type="color" value="#374b70">
+          <span>(Backgroung Color)</span>
+          <input type="color" value="#bfc8da"><br>
+          <input type="text" placeholder="Heading">
+          <input type="text" placeholder="About">
+          <label>Color</label>
+          <input type="color" value="#eeeaf4">
+          <span>(Backgroung Color)</span>
+          <input type="color" value="#374b70"><br>
+          <label>Background color</label>
+          <input type="color" value="#eeeaf4">
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line"></div>
+      </div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">5</span>
+        </div>
+        <div class="rotate">
+          <span>Quick Id<br>Phone<br>Address</span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="Quick Id (Heading)">
+          <label>color</label>
+          <input type="color" value="#ffffff"><br>
+          <input type="text" placeholder="Phone (Heading)">
+          <input type="text" placeholder="Number">
+          <label>color</label>
+          <input type="color" value="#ffffff"><br>
+          <input type="text" placeholder="Email (Heading)">
+          <input type="text" placeholder="Email">
+          <label>color</label>
+          <input type="color" value="#ffffff"><br>
+          <input type="text" placeholder="Address (Heading)">
+          <input type="text" placeholder="Address">
+          <label>color</label>
+          <input type="color" value="#ffffff"><br>
+          <label>Background Color</label>
+          <input type="color" value="#374b70">
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line line"></div>
+      </div>
+      <div class="make-flex">
+        <div>
+          <span class="make-one">6</span>
+        </div>
+        <div class="rotate">
+          <span>Contact ME<br>Input Field</span>
+        </div>
+        <div class="make-name">
+          <input type="text" placeholder="Contact Me (Heading)">
+          <label>color</label>
+          <input type="color" value="#000000"><br>
+          <label>Input Background</label>
+          <input type="color" value="#ffffff"><br>
+          <label>Button (Background)</label>
+          <input type="color" value="#bfc8da">
+          <input type="text" placeholder="Send Message">
+          <label>Color</label>
+          <input type="color" value="#ffffff"><br>
+          <label> Backgroun Color</label>
+          <input type="color" value="#bfc8da">
+        </div>
+      </div>
+      <div class="line-wrapper">
+        <div class="white-line"></div>
+      </div>
+      <input type="button" value="Get My CV" onclick="show()">
+    </div>
+    <footer class="footer">
+        MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in">Humble</a>
+    </footer>
+    </div>
+  </body>
+</html>
+
+
