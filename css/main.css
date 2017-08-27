@@ -112,9 +112,19 @@ html, body {
 .content {
   display: flex;
   justify-content: space-between;
+  font-size: x-large;
 }
 .content > p:first-of-type {
   margin-right: 25px;
+}
+.color-set {
+  margin-left: 15px;
+  margin-top: 25px;
+}
+.btnab {
+  text-align: right;
+  margin-top: -30px;
+  margin-right: 150px;
 }
 .content > p:nth-child(2) {
   margin-left: 25px;
@@ -122,6 +132,12 @@ html, body {
 .section-heading {
   font-size: 50px;
   color: white;
+}
+.clr {
+  margin-left: 10px;
+}
+.fl {
+  display: flex;
 }
 .p {
   font-size: 25px;
@@ -202,6 +218,10 @@ html, body {
 }
 .field > span:first-of-type {
   text-align: left;
+}
+.last {
+  text-align: center;
+  margin-bottom: 25px;
 }
 .field > span:nth-child(2) {
   text-align: right;
@@ -352,6 +372,14 @@ html, body {
 }
 .main-section {
   display: none;
+}
+.button-make {
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+  color: grey;
+  cursor: pointer;
+  font-variant: petite-caps;
 }
 @media only screen and (max-width: 1000px) {
   body{

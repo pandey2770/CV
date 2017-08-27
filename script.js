@@ -1,22 +1,22 @@
 function submitForm() {
-  document.getElementById('error').style.display = 'none';
-  document.getElementById('success').style.display = 'none';
-  document.getElementById('error').innerHTML = '';
+  $('#error').css('display', 'none');
+  $('#success').css('display', 'none');
+  $('#error')[0].innerHTML = '';
   var error;
   ['name', 'mail', 'sub', 'msg'].forEach(field => {
-    if (document.getElementById(field).value === '') {
+    if ($('#field').value === '') {
       error = true;
-      document.getElementById(field).style.border = '1px solid red';
-      document.getElementById('error').style.display = 'block';
-      document.getElementById('error').innerHTML = 'All fields are mandatory. <br/>';
+      $('#field').css('border','1px solid red');
+      $('#error').css('display','block');
+      $('#error')[0].innerHTML = 'All fields are mandatory. <br/>';
     }
   });
-  if (document.getElementById('mail').value &&
-    !validateEmail(document.getElementById('mail').value)) {
-    document.getElementById('mail').style.border = '1px solid red';
-    document.getElementById('error').style.display = 'block';
-    document.getElementById('error').innerHTML =
-      document.getElementById('error').innerHTML + 'Email entered is not valid.';
+  if ($('#mail').value &&
+    !validateEmail($('#mail').value)) {
+    $('#mail').css('border','1px solid red');
+    $('#error').css('display','block');
+    $('#error')[0].innerHTML =
+    $('error')[0].innerHTML + 'Email entered is not valid.';
   }
   if (!error) {
     $.ajax({
@@ -24,11 +24,11 @@ function submitForm() {
       type:'post',
       data:$('#contactus-form').serialize(),
       dataType: "json",
-      success:function(){
-        document.getElementById('success').style.display = 'block';
+      success:function() {
+        $('#success').css('display', 'block');
       },
-      error:function(){
-        document.getElementById('error').style.display = 'block';
+      error:function() {
+        $('#error').css('display','block');
       }
     });
   }
@@ -45,76 +45,110 @@ function scrollToTop() {
   }, 800);
 }
 
-
-
-function uploadImage (event) {
+function uploadImage (event, targetElementId) {
   var file = event.target.files[0];
-  var xhr = new XMLHttpRequest(); // eslint-disable-line no-undef
+  var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://api.imgur.com/3/image');
   xhr.setRequestHeader('Authorization', 'Client-ID 8d26ccd12712fca');
-  var data = new FormData(); // eslint-disable-line no-undef
+  var data = new FormData();
   data.append('image', file);
   xhr.send(data);
   xhr.addEventListener('load', () => {
     var imgSrc = JSON.parse(xhr.responseText).data.link;
-    document.getElementById('pic').src = imgSrc;
+    $('#' + targetElementId).attr('src', imgSrc);
   });
 }
-function image (event) {
-  var file = event.target.files[0];
-  var xhr = new XMLHttpRequest(); // eslint-disable-line no-undef
-  xhr.open('POST', 'https://api.imgur.com/3/image');
-  xhr.setRequestHeader('Authorization', 'Client-ID 8d26ccd12712fca');
-  var data = new FormData(); // eslint-disable-line no-undef
-  data.append('image', file);
-  xhr.send(data);
-  xhr.addEventListener('load', () => {
-    var imgSrc = JSON.parse(xhr.responseText).data.link;
-    console.log('imgSrc', imgSrc, document.getElementById('backpic'))
-    document.getElementById('backpic').src = imgSrc;
-  });
-}
-function show(){
-  var fame = document.getElementById('abhi').value;
-  var namecolor = document.getElementById('color-name').value;
-  var about = document.getElementById('about').value;
-  var aboutcolor =document.getElementById('about-color').value;
-  var aboutpara1 =document.getElementById('about-para-one').value;
-  var aboutpara2 =document.getElementById('about-para-second').value;
-  var para =document.getElementById('paracolor').value;
-  var aboutback =document.getElementById('about-backcolor').value;
-  var acd = document.getElementById('ac-color').value;
-  var adccolor = document.getElementById('acdd-color').value;
-  var adc=document.getElementById('acdd').value;
-  var ex =document.getElementById('exph').value;
-  var ex1 =document.getElementById('exph1').value;
-  var ex2 =document.getElementById('exph2').value;
-  var ex3 =document.getElementById('exphc').value; 
-  var ex4 =document.getElementById('exphb').value;
-  var ex5 =document.getElementById('exphy').value;
-  var ex6 =document.getElementById('exphy1').value;
-  var result=[
-              document.getElementById('namecome').innerHTML=fame,
-              document.getElementById('namecome').style.color=namecolor,
-              document.getElementById('aboutcome').innerHTML=about,
-              document.getElementById('aboutcome').style.color=aboutcolor,
-              document.getElementById('paraonecome').innerHTML=aboutpara1,
-              document.getElementById('parasecondcome').innerHTML=aboutpara2,
-              document.getElementById('paraonecome').style.color=para,
-              document.getElementById('parasecondcome').style.color=para,
-              document.getElementById('comecolor').style.backgroundColor=aboutback,
-              document.getElementById('acdd-come').innerHTML=adc,
-              document.getElementById('acdd-come').style.color=adccolor,
-              document.getElementById('bac').style.backgroundColor=acd,
-              document.getElementById('exp').innerHTML=ex,
-              document.getElementById('exp1').innerHTML=ex1,
-              document.getElementById('exp2').innerHTML=ex2,
-              document.getElementById('expy').innerHTML=ex5,
-              document.getElementById('expy1').innerHTML=ex6,
-              document.getElementById('expc').style.color=ex3,
-              document.getElementById('expc').style.backgroundColor=ex4,
-            ]
-            document.getElementById('none').style.display="block",
-            document.getElementById('see').style.display="none"
 
-          }
+function btn(){
+  $("#button-about").css('display', 'none');
+  $('#abhide').css('display', 'none');
+  $("#bac").css('marginTop', '0px');
+}
+
+function parahd(){
+  $('#desc2-src').css('display','none');
+  $('#x').css('display','none'); 
+  $("#about-paragraph-dest").css('textAlign',"center");
+  $("#about-paragraph-dest").css('width',"100%");
+  $("#about-paragraph-dest").css('display','block');
+}
+
+var cln=[];
+function myFunction() {
+  $('#exp-details').append(
+    '<input type="text" placeholder="Company Name" class="exp-company"></input>' +
+    '<input type="text" placeholder="Experienced Year" class="exp-year" id="exphy"></input>'
+  );
+}
+
+function addCollege() {
+  $('#college-list').append(
+    '<div id="college-details">' +
+    ' <input type="text" placeholder="Collage Name" class="college-name"/>' +
+    '  <input type="text" placeholder="Course Name" class="course-name"/>' +
+    '  <input type="text" placeholder="Years" class="college-year"/>' +
+    '</div>'
+  );
+}
+
+function preview() {
+
+  var fields = [
+    'name', 'about', 'desc1', 'desc2', 'exp', 'exp-details', 'exp-details-wrapper',
+    'academic', 'clgcolor', 'school', 'school-name', 'clg',
+    'school-cls-', 'skil', 'skil-color', 'skil-main', 'school-color', 'skil-about', 'school-section',
+    'skill1-title', 'skill1-about', 'skill1-title-section', 
+    'skill2-title', 'skill2-about', 'skill2-title-section',
+    'skill3-title', 'skill3-about', 'skill3-title-section',
+    'contact-details', 'quick', 'quick-phonetitle', 'quick-phonevalue', 'quick-phone',
+    'quick-emailtitle', 'quick-emailvalue', 'quick-email', 'quick-addresstitle',
+    'quick-address1', 'quick-address2', 'quick-address', 'exp-wrapper','skill-wrapper', 'home',  
+    'contact-section', 'contact-title', 'contact-btn', 'about-section', 'about-paragraph'
+  ];
+  // 'exp-company', exp-experience
+  fields.forEach(function(field) {
+    const textField = $('#' + field + '-src');
+    if (textField && textField.length > 0) {
+      $('#' + field + '-dest')[0].innerHTML=textField[0].value;
+    }
+    const colorField = $('#' + field + '-color');
+    if (colorField && colorField.length > 0) {
+      $('#' + field + '-dest').css('color', colorField[0].value);
+    }
+    const bgColorField = $('#' + field + '-bgcolor');
+    if (bgColorField && bgColorField.length > 0) {
+      $('#' + field + '-dest').css('background-color', bgColorField[0].value);
+    }
+  });
+
+  var expCompanies = $('.exp-company');
+  var expYears = $('.exp-year');
+  for (var i = 0;i < expCompanies.length;i++) {
+    $('#exp-details-dest').append(
+      '<div>' + expCompanies[i].value + '</div>' +
+      '<div class="duration">' + expYears[i].value + '</div>'
+    );
+  }
+
+  var collegeName = $('.college-name');
+  var collegeCourse = $('.course-name');
+  var collegeYear = $('.college-year');
+  for (var i = 0;i < collegeName.length;i++) {
+    $('#clgcolor-dest').append(
+      '<h2 id="clg-dest"></h2>' +
+      '<span id="clgname-dest">' + collegeName[i].value + '</span><br>' +
+      '<span id="clgcourse-dest">' + collegeCourse[i].value + '</span>' +
+      '<div class="duration" id="clgyear-dest">' + collegeYear[i].value + '</div>'
+    );
+  }
+
+  var contactInputBgcolor = $('#contact-input-bgcolor')[0].value;
+  $('.contactus-input').css('background-color', contactInputBgcolor);
+  $('#none').css('display', 'block');
+  $('#see').css('display', 'none');
+}
+
+
+
+
+

@@ -9,140 +9,11 @@
     <script src="lib/jquery-3.0.0.min.js"></script>
   </head>
   <body class="body">
-    <div class="main-section" id="none">
-      <div class="home-section">
-        <h1 class="home-button" onclick="scrollToTop()">HOME</h1>
-        <h1 class="heading"  id="namecome">
-          <! ABHISHEK PANDEY>
-        </h1>
-          <img src="" class="mypic" id="pic">
-      </div>
-      <div class="aboutme-wrapper" id="comecolor">
-        <div class="inner-section">
-          <h2 class="section-heading" id="aboutcome">
-              <!About me>
-          </h2>
-          <div class="content" id="content">
-            <p id="paraonecome">
-                <! Hi I’m Abhishek, a software programmer living in Delhi.
-                  I love spending time on building cool stuff, and from
-                  last 2 years I have been coding cool Web Applications. 
-                  I build innovative, reliable and useful software
-                  product.>
-            </p>
-            <p id="parasecondcome">
-              <!  I write high quality code, the web applications 
-                I build are fully responsive, and tested across a wide range 
-                of devices and screens. My each piece of code is well documented
-                  to ease maintenance and further enhancement.>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="skills-wrapper" id="bac">
-        <div class="inner-section">
-          <h2 class="section-heading" id="acdd-come">
-            <! Academic & Work>
-          </h2>
-          <div class="experience-section">
-            <div class="experience" id="expc">
-              <h2 id="exp"><!Experience></h2>
-              <div>
-                <div id="exp1">1 year with <a target="_blank" href="http://humble.net.in">Humble</a> (co-founder)</div>
-                <div class="duration" id="expy"><!(June'2016 - Current)></div> 
-              </div>
-              <div class="top-margined">
-                <div id="exp2">1 year as individual freelancer</div>
-                <div class="duration" id="expy1"><!(June'2015 - June'2016)></div>
-              </div>
-            </div>
-            <div class="experience experience-dark">
-              <h2>College</h2>
-              <span> Amity University <br>B.Tech computer science</span>
-              <div class="duration">(July'2012 - May'2016)</div>
-            </div>
-            <div class="experience">
-              <h2>School</h2>
-              <span>Lovely Public School, Delhi<br>Class 12 in 2012</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="work-wrapper">
-        <div class="inner-section-project">
-          <h2 class="section-heading">
-            Skills
-          </h2>
-          <div class="skills-section">
-            <div class="skills skills-dark">
-              <img src="img/calc.png" class="skills-icon">
-              <span class="skills-title">Calculator</span>
-              <span>In-browser calculator application built using vanills JS</span>
-            </div>
-            <div class="skills">
-              <img src="img/browser.svg" class="skills-icon">
-            </div>
-            <div class="skills skills-dark">
-              <img src="img/browser.svg" class="skills-icon">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-section">
-        <div class="contact-details">
-          <div class="contact-fields">
-            <h2 class="content-id-1">QUICK ID</h2>
-            <div class="field">
-              <span>phone</span>
-              <span>+919999594626</span>
-            </div>
-            <div class="field">
-              <span>Email</span>
-              <span class="span">pandey.abhishek2770@gmail.com</span>
-            </div>
-            <div class="field">
-              <span>Address</span>
-              <span>D-56 west vinod nagar <br>Delhi-110092</span>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form">
-          <h2 class="content-id">
-            CONTACT ME
-          </h2>
-          <form class="contactus-form" id="contactus-form">
-            <div class="contactus-details-section">
-              <div class="contactus-inputs-section">
-                <input type="text" name="name" placeholder="Name" class="contactus-input" id="name">
-                <input type="email" name="_replyto" placeholder="Email" class="contactus-input" id="mail">
-                <input type="text" name="_subject" placeholder="Subject" class="contactus-input" id="sub">
-              </div>
-              <div class="contactus-message-section">
-                <textarea name="message" placeholder="Message" class="message" id="msg"></textarea>
-              </div>
-            </div>
-            <div class="contactus-btn-section">
-              <input type="button" value="Send Message" class="contactus-btn" onclick="submitForm()">
-            </div>
-            <div id="error" class="error-msg">Please enter values correctly.</div>
-            <div id="success" class="success-msg">Thanks, I will get back to you soon.</div>
-          </form>
-        </div>
-      </div>
-      <div class="bg-img-wrapper">
-        <img src="img/backDesktop.png" class="bg-img img-desktop"  id="backpic">
-      </div>
-      <img src="img/backMobile.png" class="bg-img img-mobile">
-      <footer class="footer">
-        MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in">Humble</a>
-      </footer>
-    </div>
     <div id="see">
     <h1 class="make-heading">Get Your Own CV </h1>
     <div class="line-wrapper">
       <div class="white-line"></div>
     </div>
-    <div>
       <div class="make-flex">
         <div>
           <span class="make-one">1</span>
@@ -151,17 +22,22 @@
           <span>Name<br>Your Image<br></span>
         </div>
         <div class="make-name">
-          <input type="text" placeholder="Your Name" id="abhi" />
+          <input type="text" placeholder="Your Name" id="name-src" />
           <label>Color</label>
-          <input type="color" value="#ffffff" id="color-name"/><br>
+          <input type="color" value="#ffffff" id="name-color"/><br>
           <label>Your Image</label>
-          <input type="file" onchange="uploadImage(event)"/><br>
-          <label>Background Image</label>
-          <input type="file" onchange="image(event)"/><br>
+          <input type="file" onchange="uploadImage(event, 'pic')"/><br>
+          <label>Background Image (Desktop)</label>
+          <input type="file" onchange="uploadImage(event, 'backpic')"/><br>
+          <label>Background Image (Mobile)</label>
+          <input type="file" onchange="uploadImage(event, 'mbpic')"/><br>
         </div>
       </div>
       <div class="line-wrapper">
         <div class="white-line line"></div>
+      </div>
+      <div class="btnab">
+        <input type="button" value="X" onclick="btn()"/>
       </div>
       <div class="make-flex">
         <div>
@@ -170,19 +46,26 @@
         <div class="rotate">
           <span>About you<br>Briefly Describe</span>
         </div>
-        <div class="make-name">
-          <input type="text" placeholder="About Me (Heading)" id="about" />
+        <div class="make-name" id="abhide">
+          <input type="text" placeholder="About Me (Heading)" id="about-src" />
           <label>Color</label>
           <input type="color" value="#ffffff" id="about-color"/><br>
-          <textarea name="Message" placeholder="First paragrahpe" id="about-para-one"/></textarea>
-          <textarea name="Message" placeholder="Second paragrahpe" id="about-para-second"></textarea>
-          <label>Color</label>
-          <input type="color" value="#374b70" id="paracolor"/><br>
+          <div class="flex">
+            <div>
+              <textarea name="Message" placeholder="First paragrahpe" id="desc1-src"></textarea><br>
+              <textarea name="Message" placeholder="Second paragrahpe" id="desc2-src"></textarea>
+              <input type="button" value="X" onclick="parahd()" id="x"/>
+            </div>
+            <div class="color-set"> 
+              <label>Color</label>
+              <input type="color" value="#374b70" id="about-paragraph-color"/><br>
+            </div>
+          </div>
           <lable> Background color</lable>
-          <input type="color" value="#eeeaf4" id="about-backcolor"/>
+          <input type="color" value="#eeeaf4" id="about-section-bgcolor"/>
         </div>
       </div>
-      <div class="line-wrapper">
+      <div class="line-wrapper" id="abhi">
         <div class="white-line"></div>
       </div>
       <div class="make-flex">
@@ -193,34 +76,49 @@
           <span>Academic<br>Experience<br>School & Collage</span>
         </div>
         <div class="make-name">
-          <input type="text" placeholder="Academic & Work (Heading)" id="acdd"/>
+          <input type="text" placeholder="Academic & Work (Heading)" id="academic-src"/>
           <label>Color</label>
-          <input type="color" value="#ffffff" id="acdd-color"/><br>
-          <input type="text" placeholder="Experience (Heading)" id="exph"/>
-          <input type="text" placeholder="About Experience" id="exph1"/>
-          <input type="text" placeholder="Experience Year" id="exphy"/>
-          <input type="text" placeholder="About Experience" id="exph2"/>
-          <input type="text" placeholder="Experience Year" id="exphy1"/>
+          <input type="color" value="#ffffff" id="academic-color"/><br>
+          <input type="text" placeholder="Experience (Heading)" id="exp-src"/>
+          <div class="fl">
+            <div id="myList2">
+              <div id="exp-details">
+                <input type="text" placeholder="Company Name" class="exp-company" id="exp-company-src"></input>
+                <input type="text" placeholder="Experienced Year" class="exp-year" id="exp-experience-src"></input>
+              </div>
+            </div>
+            <div id="myList1"></div>
+            <div class="clr">
+              <label>Color</label>
+              <input type="color" value="#374b70" id="exp-details-wrapper-color"/>
+              <lable>Backgroung Color</lable>
+              <input type="color" value="#eeeaf4" id="exp-details-wrapper-bgcolor"/>
+              <button onclick="myFunction()">+</button>
+            </div>
+          </div>
+          <input type="text" placeholder="Collage (Heading)" id="clg-src"/>
+          <div id="college-list">
+            <div id="college-details">
+              <input type="text" placeholder="Collage Name" class="college-name"/>
+              <input type="text" placeholder="Course Name" class="course-name"/>
+              <input type="text" placeholder="Years" class="college-year"/>
+            </div>
+          </div>
           <label>Color</label>
-          <input type="color" value="#374b70" id="exphc"/>
-          <span>(Backgroung Color)</span>
-          <input type="color" value="#eeeaf4" id="exphb"/><br>
-          <input type="text" placeholder="Collage (Heading)"/>
-          <input type="text" placeholder="Collage Name"/>
-          <input type="text" placeholder="Course Name"/>
-          <label>Color</label>
-          <input type="color" value="#eeeaf4"/>
-          <span>(Backgroung Color)</span>
-          <input type="color" value="#374b70"/><br>
-          <input type="text" placeholder="School (Heading)"/>
-          <input type="text" placeholder="School Name"/>
-          <input type="text" placeholder="Class And Year"/>
-          <label>Color</label>
-          <input type="color" value="#374b70"/>
+          <input type="color" value="#eeeaf4" id="clgcolor-color"/>
           <lable>Backgroung Color</lable>
-          <input type="color" value="#eeeaf4"/><br>
+          <input type="color" value="#374b70" id="clgcolor-bgcolor"/>
+          <button onclick="addCollege()">+</button><br>
+
+          <input type="text" placeholder="School (Heading)" id="school-src" />
+          <input type="text" placeholder="School Name" id="school-name-src"/>
+          <input type="text" placeholder="Class And Year" id="school-cls-src"/>
+          <label>Color</label>
+          <input type="color" value="#374b70" id="school-section-color"/>
+          <lable>Backgroung Color</lable>
+          <input type="color" value="#eeeaf4" id="school-section-bgcolor"/><br>
           <label> Background color</label>
-          <input type="color" value="#eeeaf4" id="ac-color"/>
+          <input type="color" value="#eeeaf4" id="exp-wrapper-bgcolor"/>
         </div>
       </div>
       <div class="line-wrapper">
@@ -234,29 +132,35 @@
           <span>Skills<br>Projects</span>
         </div>
         <div class="make-name">
-          <input type="text" placeholder="Skills (Heading)">
+          <input type="text" placeholder="Skills (Heading)" id="skil-src">
           <label>Color</label>
-          <input type="color" value="#ffffff"><br>
-          <input type="text" placeholder="Heading">
-          <input type="text" placeholder="About">
+          <input type="color" value="#ffffff" id="skil-color"/><br>
+
+          <input type="text" placeholder="Heading" id="skill1-title-src"/>
+          <input type="text" placeholder="About" id="skill1-about-src"/>
           <label>Color</label>
-          <input type="color" value="#eeeaf4">
-          <span>(Backgroung Color)</span>
-          <input type="color" value="#374b70"><br>
-          <input type="text" placeholder="Heading">
-          <input type="text" placeholder="About">
+          <input type="color" value="#eeeaf4" id="skill1-title-section-color">
+          <label> Backgroung Color</label>
+          <input type="color" value="#374b70" id="skill1-title-section-bgcolor"/><br>
+        
+          <input type="text" placeholder="Heading" id="skill2-title-src"/>
+          <input type="text" placeholder="About" id="skill2-about-src"/>
           <label>Color</label>
-          <input type="color" value="#374b70">
-          <span>(Backgroung Color)</span>
-          <input type="color" value="#bfc8da"><br>
-          <input type="text" placeholder="Heading">
-          <input type="text" placeholder="About">
+          <input type="color" value="#374b70" id="skill2-title-section-color"/>
+          <label>Backgroung Color</label>
+          <input type="color" value="#bfc8da" id="skill2-title-section-bgcolor"/><br>
+
+          <input type="text" placeholder="Heading" id="skill3-title-src"/>
+          <input type="text" placeholder="About" id="skill2-about-src"/>
           <label>Color</label>
-          <input type="color" value="#eeeaf4">
-          <span>(Backgroung Color)</span>
-          <input type="color" value="#374b70"><br>
+          <input type="color" value="#eeeaf4" id="skill3-title-section-color"/>
+          <label>Backgroung Color</label>
+          <input type="color" value="#374b70" id="skill3-title-section-bgcolor"/><br>
           <label>Background color</label>
-          <input type="color" value="#eeeaf4">
+          <input type="color" value="#eeeaf4" id="skill-wrapper-bgcolor"/>
+        </div>
+        <div>
+          <input type="button"/>
         </div>
       </div>
       <div class="line-wrapper">
@@ -270,23 +174,31 @@
           <span>Quick Id<br>Phone<br>Address</span>
         </div>
         <div class="make-name">
-          <input type="text" placeholder="Quick Id (Heading)">
+          <input type="text" placeholder="Quick Id (Heading)" id="quick-src"/>
           <label>color</label>
-          <input type="color" value="#ffffff"><br>
-          <input type="text" placeholder="Phone (Heading)">
-          <input type="text" placeholder="Number">
+          <input type="color" value="#ffffff" id="quick-color"/><br>
+
+          <input type="text" placeholder="Phone (Heading)" id="quick-phonetitle-src"/>
+          <input type="text" placeholder="Number" id="quick-phonevalue-src"/>
           <label>color</label>
-          <input type="color" value="#ffffff"><br>
-          <input type="text" placeholder="Email (Heading)">
-          <input type="text" placeholder="Email">
+          <input type="color" value="#ffffff" id="quick-phone-color"/><br>
+
+          <input type="text" placeholder="Email (Heading)" id="quick-emailtitle-src"/>
+          <input type="text" placeholder="Email" id="quick-emailvalue-src"/>
           <label>color</label>
-          <input type="color" value="#ffffff"><br>
-          <input type="text" placeholder="Address (Heading)">
-          <input type="text" placeholder="Address">
+          <input type="color" value="#ffffff" id="quick-email-color"><br>
+
+          <input type="text" placeholder="Address (Heading)" id="quick-addresstitle-src"/>
+          <input type="text" placeholder="Address" id="quick-address1-src"/>
+          <input type="text" placeholder="Address" id="quick-address2-src"/>
           <label>color</label>
-          <input type="color" value="#ffffff"><br>
+          <input type="color" value="#ffffff" id="quick-address-color"/><br>
+
           <label>Background Color</label>
-          <input type="color" value="#374b70">
+          <input type="color" value="#374b70" id="contact-details-bgcolor"/>
+        </div>
+        <div>
+          <input type="button"/>
         </div>
       </div>
       <div class="line-wrapper">
@@ -300,30 +212,154 @@
           <span>Contact ME<br>Input Field</span>
         </div>
         <div class="make-name">
-          <input type="text" placeholder="Contact Me (Heading)">
+          <input type="text" placeholder="Contact Me (Heading)" id="contact-title-src"/>
           <label>color</label>
-          <input type="color" value="#000000"><br>
+          <input type="color" value="#000000" id="contact-title-color"/><br>
           <label>Input Background</label>
-          <input type="color" value="#ffffff"><br>
-          <label>Button (Background)</label>
-          <input type="color" value="#bfc8da">
-          <input type="text" placeholder="Send Message">
-          <label>Color</label>
-          <input type="color" value="#ffffff"><br>
+          <input type="color" value="#ffffff" id="contact-input-bgcolor"><br>
+          <label>Button Background Color</label>
+          <input type="color" value="#bfc8da" id="contact-btn-bgcolor"/>
+          <label>Send Message (Color)</label>
+          <input type="color" value="#ffffff" id="smscr"/><br>
           <label> Backgroun Color</label>
-          <input type="color" value="#bfc8da">
+          <input type="color" value="#bfc8da" id="contact-section-bgcolor"/>
+        </div>
+        <div>
+          <input type="button"/>
         </div>
       </div>
-      <div class="line-wrapper">
-        <div class="white-line"></div>
+      <input type="text" placeholder="Home (Heading)" id="home-src"/>
+      <label>color</label>
+      <input type="color" value="#000000" id="home-color"/>
+      <div class="last"> 
+        <input type="button" value="Show My CV" onclick="preview()" class="button-make">
       </div>
-      <input type="button" value="Get My CV" onclick="show()">
-    </div>
     <footer class="footer">
         MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in">Humble</a>
     </footer>
     </div>
+    <div class="main-section" id="none">
+        <div class="home-section">
+          <h1 class="home-button" onclick="scrollToTop()" id="home-dest">HOME</h1>
+          <h1 class="heading" id="name-dest">
+            <! ABHISHEK PANDEY>
+          </h1>
+            <img src="" class="mypic" id="pic">
+        </div>
+        <div class="aboutme-wrapper" id="about-section-dest">
+          <div class="inner-section" id="button-about">
+            <h2 class="section-heading" id="about-dest">
+                <!About me>
+            </h2>
+            <div class="content" id="about-paragraph-dest">
+              <p id="desc1-dest">
+                  <! Hi I’m Abhishek, a software programmer living in Delhi.
+                    I love spending time on building cool stuff, and from
+                    last 2 years I have been coding cool Web Applications. 
+                    I build innovative, reliable and useful software
+                    product.>
+              </p>
+              <p id="desc2-dest">
+                <!  I write high quality code, the web applications 
+                  I build are fully responsive, and tested across a wide range 
+                  of devices and screens. My each piece of code is well documented
+                    to ease maintenance and further enhancement.>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="skills-wrapper" id="exp-wrapper-dest">
+          <div class="inner-section">
+            <h2 class="section-heading" id="academic-dest">
+              <! Academic & Work>
+            </h2>
+            <div class="experience-section">
+              <div class="experience" id="exp-details-wrapper-dest">
+                <h2 id="exp-dest"><!Experience></h2>
+                <div class="top-margined" id="exp-details-dest">
+                </div>
+              </div>
+              <div class="experience experience-dark" id="clgcolor-dest">
+                <h2 id="clg-dest"><!Experience></h2>
+              </div>
+              <div class="experience" id="school-section-dest">
+                <h2 id="school-dest"><!School></h2>
+                <span id="school-name-dest"><!Lovely Public School, Delhi></span>
+                <div class="duration" id="school-cls-dest"><!(July'2012 - May'2016)></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-wrapper" id="skill-wrapper-dest">
+          <div class="inner-section-project">
+            <h2 class="section-heading" id="skil-dest">
+              <!Skills>
+            </h2>
+            <div class="skills-section">
+              <div class="skills skills-dark" id="skill1-title-section-dest">
+                <span class="skills-title" id="skill1-title-dest"><!Calculator></span>
+                <span id="skill1-about-dest"><!In-browser calculator application built using vanills JS></span>
+              </div>
+              <div class="skills" id="skill2-title-section-dest">
+                <span class="skills-title" id="skill2-title-dest"><!Calculator></span>
+                <span id="skill2-about-dest"><!In-browser calculator application built using vanills JS></span>
+              </div>
+              <div class="skills skills-dark" id="skill3-title-section-dest">
+                <span class="skills-title" id="skill3-title-dest"><!Calculator></span>
+                <span id="skill3-about-dest"><!In-browser calculator application built using vanills JS></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="contact-details" id="contact-details-dest">
+            <div class="contact-fields">
+              <h2 class="content-id-1" id="quick-dest"><!QUICK ID></h2>
+              <div class="field" id="quick-phone-dest">
+                <span id="quick-phonetitle-dest"><!phone></span>
+                <span id="quick-phonevalue-dest"><!+919999594626></span>
+              </div>
+              <div class="field" id="quick-email-dest">
+                <span id="quick-emailtitle-dest"><!Email></span>
+                <span class="span" id="quick-emailvalue-dest"><!pandey.abhishek2770@gmail.com></span>
+              </div>
+              <div class="field" id="quick-address-dest">
+                <span id="quick-addresstitle-dest"><!Address></span>
+                <span id="quick-address1-dest"><!D-56 west vinod nagar ></span><br>
+                <span id="quick-address2-dest"><!D-56 west vinod nagar ></span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form" id="contact-section-dest">
+            <h2 class="content-id" id="contact-title-dest">
+              <!CONTACT ME>
+            </h2>
+            <form class="contactus-form" id="contactus-form">
+              <div class="contactus-details-section">
+                <div class="contactus-inputs-section">
+                  <input type="text" name="name" placeholder="Name" class="contactus-input" id="name">
+                  <input type="email" name="_replyto" placeholder="Email" class="contactus-input" id="mail">
+                  <input type="text" name="_subject" placeholder="Subject" class="contactus-input" id="sub">
+                </div>
+                <div class="contactus-message-section">
+                  <textarea name="message" placeholder="Message" class="message contactus-input" id="msg"></textarea>
+                </div>
+              </div>
+              <div class="contactus-btn-section">
+                <input type="button" value="Send Message" class="contactus-btn" onclick="submitForm()" id="contact-btn-dest">
+              </div>
+              <div id="error" class="error-msg">Please enter values correctly.</div>
+              <div id="success" class="success-msg">Thanks, I will get back to you soon.</div>
+            </form>
+          </div>
+        </div>
+        <div class="bg-img-wrapper">
+          <img src="img/backDesktop.png" class="bg-img img-desktop"  id="backpic">
+        </div>
+        <img src="img/backMobile.png" class="bg-img img-mobile" id="mbpic">
+        <footer class="footer">
+          MADE WITH LOVE BY <a target="_blank" href="http://humble.net.in">Humble</a>
+        </footer>
+      </div>
   </body>
 </html>
-
-
