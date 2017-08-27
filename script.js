@@ -20,7 +20,7 @@ function submitForm() {
   }
   if (!error) {
     $.ajax({
-      url:'https://formspree.io/pandeybc2008@gmail.com',
+      url:'https://formspree.io/pandey.abhishek2770@gmail.com',
       type:'post',
       data:$('#contactus-form').serialize(),
       dataType: "json",
