@@ -20,7 +20,7 @@ function submitForm() {
   }
   if (!error) {
     $.ajax({
-      url:'https://formspree.io/pandey.abhishek2770@gmail.com',
+      url:'https://formspree.io/pandeybc2008@gmail.com',
       type:'post',
       data:$('#contactus-form').serialize(),
       dataType: "json",
@@ -148,7 +148,20 @@ function preview() {
   $('#see').css('display', 'none');
 }
 
+alert('hi')
+console.log('hi', $.ajax)
+$.ajax({
+  url: 'https://api.backendless.com/07354D73-B03F-31FD-FFCA-47E51B57AB00/FF39A832-755D-92C4-FF66-26EA997CAE00/data/user'
+});
 
-
-
-
+$.ajax({
+  type: 'POST',
+  url: 'https://api.backendless.com/07354D73-B03F-31FD-FFCA-47E51B57AB00/FF39A832-755D-92C4-FF66-26EA997CAE00/data/user',
+  contentType: 'application/json; charset=utf-8',
+  dataType: 'json',
+  data: JSON.stringify({
+    "username": "test",
+    "email": "test@test.com",
+    "name": "testing"
+  })
+});
