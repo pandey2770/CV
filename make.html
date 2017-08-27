@@ -10,64 +10,64 @@
   </head>
   <body class="body">
     <div id="see">
-    <h1 class="make-heading">Get Your Own CV </h1>
+     <h1 class="make-heading">Get Your Own CV </h1>
     <div class="line-wrapper">
       <div class="white-line"></div>
     </div>
-      <div class="make-flex">
-        <div>
-          <span class="make-one">1</span>
-        </div>
-        <div class="rotate">
-          <span>Name<br>Your Image<br></span>
-        </div>
-        <div class="make-name">
-          <input type="text" placeholder="Your Name" id="name-src" />
-          <label>Color</label>
-          <input type="color" value="#ffffff" id="name-color"/><br>
-          <label>Your Image</label>
-          <input type="file" onchange="uploadImage(event, 'pic')"/><br>
-          <label>Background Image (Desktop)</label>
-          <input type="file" onchange="uploadImage(event, 'backpic')"/><br>
-          <label>Background Image (Mobile)</label>
-          <input type="file" onchange="uploadImage(event, 'mbpic')"/><br>
-        </div>
+    <div class="make-flex">
+      <div>
+        <span class="make-one">1</span>
       </div>
-      <div class="line-wrapper">
-        <div class="white-line line"></div>
+      <div class="rotate">
+        <span>Name<br>Your Image<br></span>
       </div>
-      <div class="btnab">
-        <input type="button" value="X" onclick="btn()"/>
+      <div class="make-name">
+        <input type="text" placeholder="Your Name" id="name-src" />
+        <label>Color</label>
+        <input type="color" value="#ffffff" id="name-color"/><br>
+        <label>Your Image</label>
+        <input type="file" onchange="uploadImage(event, 'pic')"/><br>
+        <label>Background Image (Desktop)</label>
+        <input type="file" onchange="uploadImage(event, 'backpic')"/><br>
+        <label>Background Image (Mobile)</label>
+        <input type="file" onchange="uploadImage(event, 'mbpic')"/><br>
       </div>
-      <div class="make-flex">
-        <div>
-          <span class="make-one">2</span>
-        </div>
-        <div class="rotate">
-          <span>About you<br>Briefly Describe</span>
-        </div>
-        <div class="make-name" id="abhide">
-          <input type="text" placeholder="About Me (Heading)" id="about-src" />
-          <label>Color</label>
-          <input type="color" value="#ffffff" id="about-color"/><br>
-          <div class="flex">
-            <div>
-              <textarea name="Message" placeholder="First paragrahpe" id="desc1-src"></textarea><br>
-              <textarea name="Message" placeholder="Second paragrahpe" id="desc2-src"></textarea>
-              <input type="button" value="X" onclick="parahd()" id="x"/>
-            </div>
-            <div class="color-set"> 
-              <label>Color</label>
-              <input type="color" value="#374b70" id="about-paragraph-color"/><br>
-            </div>
+    </div>
+    <div class="line-wrapper">
+      <div class="white-line line"></div>
+    </div>
+    <div class="btnab">
+      <input type="button" value="X" onclick="btn()"/>
+    </div>
+    <div class="make-flex">
+      <div>
+        <span class="make-one">2</span>
+      </div>
+      <div class="rotate">
+        <span>About you<br>Briefly Describe</span>
+      </div>
+      <div class="make-name" id="abhide">
+        <input type="text" placeholder="About Me (Heading)" id="about-src" />
+        <label>Color</label>
+        <input type="color" value="#ffffff" id="about-color"/><br>
+        <div class="flex">
+          <div>
+            <textarea name="Message" placeholder="First paragrahpe" id="desc1-src"></textarea><br>
+            <textarea name="Message" placeholder="Second paragrahpe" id="desc2-src"></textarea>
+            <input type="button" value="X" onclick="parahd()" id="x"/>
           </div>
-          <lable> Background color</lable>
-          <input type="color" value="#eeeaf4" id="about-section-bgcolor"/>
+          <div class="color-set"> 
+            <label>Color</label>
+            <input type="color" value="#374b70" id="about-paragraph-color"/><br>
+          </div>
         </div>
+        <lable> Background color</lable>
+        <input type="color" value="#eeeaf4" id="about-section-bgcolor"/>
       </div>
-      <div class="line-wrapper" id="abhi">
-        <div class="white-line"></div>
-      </div>
+    </div>
+    <div class="line-wrapper" id="abhi">
+      <div class="white-line"></div>
+    </div>
       <div class="make-flex">
         <div>
           <span class="make-one">3</span>
@@ -83,8 +83,8 @@
           <div class="fl">
             <div id="myList2">
               <div id="exp-details">
-                <input type="text" placeholder="Company Name" class="exp-company" id="exp-company-src"></input>
-                <input type="text" placeholder="Experienced Year" class="exp-year" id="exp-experience-src"></input>
+                <input type="text" placeholder="Company Name" class="exp-company" id="exp-company-src" />
+                <input type="text" placeholder="Experienced Year" class="exp-year" id="exp-experience-src" />
               </div>
             </div>
             <div id="myList1"></div>
@@ -109,7 +109,6 @@
           <lable>Backgroung Color</lable>
           <input type="color" value="#374b70" id="clgcolor-bgcolor"/>
           <button onclick="addCollege()">+</button><br>
-
           <input type="text" placeholder="School (Heading)" id="school-src" />
           <input type="text" placeholder="School Name" id="school-name-src"/>
           <input type="text" placeholder="Class And Year" id="school-cls-src"/>
