@@ -1,0 +1,36 @@
+{
+  "name": "cv-generator",
+  "version": "0.1.0",
+  "description": "A CV Generator application",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandey2770/cv.git"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "CMS",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Abhishek Pandey <pandey.abhishek2770@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandey2770/cv/issues"
+  },
+  "homepage": "https://github.com/pandey2770/cv#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
