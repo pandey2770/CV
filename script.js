@@ -148,8 +148,6 @@ function preview() {
   $('#see').css('display', 'none');
 }
 
-alert('hi')
-console.log('hi', $.ajax)
 $.ajax({
   url: 'https://api.backendless.com/07354D73-B03F-31FD-FFCA-47E51B57AB00/FF39A832-755D-92C4-FF66-26EA997CAE00/data/user'
 });
