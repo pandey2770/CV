@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Make Your Own CV</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
+    <script src="lib/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="script.js"></script> 
+  </head>
+  <body class="body">
+    <div id="none" class="show-hide">
+      <input type="button" value="Login" class="loginbtn" onclick="loginn()"/>
+      <span class="loginbtn">/</span>
+      <input type="button" value="Sign up" class="loginbtn" onclick="signupp()"/>
+    </div>
+    <div class="login" id="login">
+      <h1>Login</h1>
+      <div>
+        <lable>Email</lable>
+        <input type="text" class="login-input" id="log-mail"/><br>
+        <label>Password</label>
+        <input type="text" class="login-input" id="log-pas"/><br>
+        <input type="button" value="login" onclick="log()"/><br>
+        <label>OR</label>
+        <input type="button" value="SignUp" onclick="signup2()"/>
+      </div>
+    </div>
+    <div class="login" id="signup">
+      <h1>Sign Up</h1>
+      <div>
+        <lable>Email</lable>
+        <input type="text" class="login-input" id="log-mail"/><br>
+        <label>Password</label>
+        <input type="text" class="login-input" id="log-pas"/><br>
+        <label>Confirm Password</label>
+        <input type="text" class="login-input" id="log-pas"/><br>
+        <input type="button" value="sign up"/><br>
+        <label>OR</label>
+        <input type="button" value="Login" onclick="login2()"/>
+      </div>
+    </div>
+    <div class="bg-img-wrapper">
+      <img src="img/backDesktop.png" class="bg-img img-desktop">
+      <img src="img/backMobile.png" class="bg-img img-mobile">
+    </div>
+    

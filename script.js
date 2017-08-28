@@ -163,3 +163,26 @@ $.ajax({
     "name": "testing"
   })
 });
+
+function log(){
+  if(document.getElementById('log-mail').value==="ssdn",
+  document.getElementById('log-pas').value==="ssdn"){
+    return window.document.location.href = 'make.html';
+  }else(alert('check your mail or password'));console.log(log);
+}
+function loginn(){
+  document.getElementById('login').style.display='block';
+  document.getElementById('none').style.display='none';
+}
+function signupp(){
+  document.getElementById('signup').style.display='block';
+  document.getElementById('none').style.display='none';
+}
+function signup2(){
+  document.getElementById('login').style.display='none';
+  document.getElementById('signup').style.display='block';
+}
+function login2(){
+  document.getElementById('signup').style.display='none';
+  document.getElementById('login').style.display='block';
+}

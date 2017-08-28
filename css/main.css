@@ -288,6 +288,22 @@ html, body {
   background-color: #eeeaf4;
   color: #374b70;
 }
+.loginbtn {
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  margin-top: 200px;
+  border: none;
+  outline: none;
+  font-size: 100px;
+}
+.show-hide {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .experience-dark {
   color: #eeeaf4;
   background-color: #374b70;
@@ -296,6 +312,27 @@ html, body {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+.login {
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  margin-top: 100px;
+  border-color: white;
+  color: white;
+  font-size: xx-large;
+  display: none;
+}
+.login-input {
+  color: white;
+  outline: none;
+  font-size: x-large;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 50%;
+  margin-left: 20px;
 }
 .skills {
   width: 33%;
