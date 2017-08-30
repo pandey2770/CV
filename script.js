@@ -171,18 +171,39 @@ function log(){
   }else(alert('check your mail or password'));console.log(log);
 }
 function loginn(){
-  document.getElementById('login').style.display='block';
-  document.getElementById('none').style.display='none';
+  $('#login').css('display','block');
+  $('#none-sign').css('display','none');
 }
 function signupp(){
-  document.getElementById('signup').style.display='block';
-  document.getElementById('none').style.display='none';
+  $('#signup').css('display','block');
+  $('#none-sign').css('display','none');
 }
 function signup2(){
-  document.getElementById('login').style.display='none';
-  document.getElementById('signup').style.display='block';
+  $('#login').css('display','none');
+  $('#signup').css('display','block');
 }
 function login2(){
-  document.getElementById('signup').style.display='none';
-  document.getElementById('login').style.display='block';
+  $('#signup').css('display','none');
+  $('#login').css('display','block');
+}
+function edit(){
+  $('#see').css('display','block');
+  $('#none').css('display','none');
+}
+var slide = 1;
+showDivs(slide);
+function button(n){
+  showDivs (slide +=n);
+}
+function showDivs(n){
+  var i;
+  var x = document.getElementsByClassName("slideshow");
+  if ( n > x.length ) {
+      slide = 1
+  }
+  if ( n < 1) { slide = x.length}
+  for ( i = 0; i < x.length; i++ ) {
+    x[i].style.display = "none";
+    x[slide-1].style.display="block";
+  }
 }
